@@ -1,0 +1,19 @@
+[project]
+name = "ebay-scraping-agent"
+version = "0.1.0"
+description = "Automatisierte eBay-Produktsuche & Preisanalyse mit Browser-Use"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+browser-use = [
+    "browser-use>=0.1.0",
+]
+dev = [
+    "pytest>=8.0",
+    "pytest-asyncio>=0.24",
+]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]

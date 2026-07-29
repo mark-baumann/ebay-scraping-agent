@@ -90,12 +90,22 @@ class EbayScraper:
         
         prices = [p.price for p in self.products if p.price > 0]
         
+        if not prices:
+            return {"error": "Keine gültigen Preise"}
+        
+        sorted_prices = sorted(prices)
+        n = len(sorted_prices)
+        if n % 2 == 0:
+            median = (sorted_prices[n // 2 - 1] + sorted_prices[n // 2]) / 2
+        else:
+            median = sorted_prices[n // 2]
+        
         return {
-            "count": len(prices),
-            "min": min(prices) if prices else 0,
-            "max": max(prices) if prices else 0,
-            "avg": sum(prices) / len(prices) if prices else 0,
-            "median": sorted(prices)[len(prices)//2] if prices else 0,
+            "count": n,
+            "min": min(prices),
+            "max": max(prices),
+            "avg": sum(prices) / n,
+            "median": median,
         }
     
     def export_json(self, path: str = "ebay_products.json"):
