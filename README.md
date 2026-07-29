@@ -31,7 +31,7 @@ python ebay_scraper.py --search "Grafikkarte" --export both
 ## Tests
 
 ```bash
-uv run pytest -v
+.venv/bin/python -m pytest -v
 ```
 
 ## Projektstruktur
