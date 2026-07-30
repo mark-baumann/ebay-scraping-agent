@@ -15,6 +15,9 @@ ebay_products.csv
 .vscode/
 .idea/
 
+# Tests
+.pytest_cache/
+
 # OS
 .DS_Store
 Thumbs.db

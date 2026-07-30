@@ -3,7 +3,11 @@ name = "ebay-scraping-agent"
 version = "0.1.0"
 description = "Automatisierte eBay-Produktsuche & Preisanalyse mit Browser-Use"
 requires-python = ">=3.11"
-dependencies = []
+dependencies = [
+    "streamlit>=1.50",
+    "pandas>=2.0",
+    "numpy>=1.24",
+]
 
 [project.optional-dependencies]
 browser-use = [

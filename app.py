@@ -10,24 +10,9 @@ import numpy as np
 import json
 import os
 from datetime import datetime
-from dataclasses import dataclass, field
-from typing import List, Optional
+from typing import List
 
-# ──────────────────────────────────────────────────────────────
-# Datenmodell
-# ──────────────────────────────────────────────────────────────
-
-@dataclass
-class EbayProduct:
-    title: str
-    price: float
-    currency: str = "EUR"
-    condition: str = "Gebraucht"
-    shipping: float = 0.0
-    url: str = ""
-    seller: str = ""
-    location: str = "Deutschland"
-    scraped_at: str = field(default_factory=lambda: datetime.now().isoformat())
+from ebay_scraper import EbayProduct
 
 
 # ──────────────────────────────────────────────────────────────
