@@ -28,8 +28,6 @@ jobs:
           tags: |
             ghcr.io/mark-baumann/ebay-scraping-agent:latest
             ghcr.io/mark-baumann/ebay-scraping-agent:${{ github.sha }}
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
 
   deploy:
     needs: build
