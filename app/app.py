@@ -9,9 +9,11 @@ import pandas as pd
 import numpy as np
 import json
 import os
+import sys
 from datetime import datetime
 from typing import List
 
+sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
 from ebay_scraper import EbayProduct
 
 
