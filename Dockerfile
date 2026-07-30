@@ -25,7 +25,7 @@ EXPOSE $PORT
 
 # Healthcheck
 HEALTHCHECK --interval=30s --timeout=5s --retries=3 \
-  CMD python -c "import urllib.request;urllib.request.urlopen('http://localhost:${PORT}/_stcore/health')"
+  CMD python -c "import urllib.request;urllib.request.urlopen('http://localhost:8514/_stcore/health')"
 
 # Streamlit
-CMD streamlit run app/app.py --server.port=$PORT --server.address=0.0.0.0 --server.headless=true
+CMD streamlit run app/app.py --server.port=8514 --server.address=0.0.0.0 --server.headless=true
