@@ -21,3 +21,5 @@ ebay_products.csv
 # OS
 .DS_Store
 Thumbs.db
+.venv
+*.pyc
